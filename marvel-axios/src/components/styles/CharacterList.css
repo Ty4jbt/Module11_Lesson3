@@ -1,0 +1,67 @@
+.character-list {
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.character-list h2 {
+    color: #f0131e;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.character-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    cursor: pointer;
+    background-color: white;
+}
+
+.character-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.character-card.active {
+    border: 2px solid #f0131e;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(240, 19, 30, 0.2);
+}
+
+.character-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.character-name {
+    padding: 8px;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 20px;
+    font-weight: 500;
+}
+
+.error {
+    color: #f0131e;
+}
